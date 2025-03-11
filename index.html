@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="एक सुंदर और न्यूनतम भारतीय वेबसाइट।">
+    <meta name="keywords" content="भारतीय, डिज़ाइन, वेबसाइट, यूआई, यूएक्स">
+    <meta name="author" content="आपका नाम">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com">
+    <title>भारतीय डिज़ाइन वेबसाइट</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function shareWebsite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'भारतीय डिज़ाइन वेबसाइट',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                alert('यह ब्राउज़र शेयरिंग का समर्थन नहीं करता है।');
+            }
+        }
+
+        function downloadWebsite() {
+            const link = document.createElement('a');
+            link.href = window.location.href;
+            link.download = 'Indian_Design_Website.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</head>
+<body class="bg-orange-100 text-gray-900">
+    <nav class="p-6 bg-white shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-semibold text-orange-600">भारत ब्रांड</h1>
+        <ul class="flex space-x-6">
+            <li><a href="#about" class="hover:text-orange-600">हमारे बारे में</a></li>
+            <li><a href="#services" class="hover:text-orange-600">सेवाएँ</a></li>
+            <li><a href="#portfolio" class="hover:text-orange-600">पोर्टफोलियो</a></li>
+            <li><a href="#contact" class="hover:text-orange-600">संपर्क करें</a></li>
+            <li><a href="#signup" class="hover:text-orange-600">साइन अप</a></li>
+            <li><a href="#login" class="hover:text-orange-600">लॉगिन</a></li>
+        </ul>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+        <h2 class="text-4xl font-bold text-green-700">स्वागत है हमारी भारतीय वेबसाइट पर</h2>
+        <p class="text-lg text-gray-600 mt-4">सौंदर्य, संस्कृति और नवीनता</p>
+        <div class="mt-6 flex space-x-4">
+            <button onclick="shareWebsite()" class="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600">शेयर करें</button>
+            <button onclick="downloadWebsite()" class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600">डाउनलोड करें</button>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-16 px-6 text-center bg-white">
+        <h3 class="text-3xl font-semibold text-orange-700">हमारा पोर्टफोलियो</h3>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-gray-200 shadow-md rounded-lg">
+                <img src="https://via.placeholder.com/300/ffa500/ffffff?text=ताज+महल" alt="ताज महल" class="w-full rounded-lg">
+                <p class="mt-2">ताज महल प्रोजेक्ट</p>
+            </div>
+            <div class="p-6 bg-gray-200 shadow-md rounded-lg">
+                <img src="https://via.placeholder.com/300/008000/ffffff?text=गेटवे+ऑफ+इंडिया" alt="गेटवे ऑफ इंडिया" class="w-full rounded-lg">
+                <p class="mt-2">गेटवे ऑफ इंडिया प्रोजेक्ट</p>
+            </div>
+            <div class="p-6 bg-gray-200 shadow-md rounded-lg">
+                <img src="https://via.placeholder.com/300/ff0000/ffffff?text=जयपुर+हवामहल" alt="हवा महल" class="w-full rounded-lg">
+                <p class="mt-2">हवा महल प्रोजेक्ट</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-6 bg-white text-center">
+        <h3 class="text-3xl font-semibold text-orange-700">हमारे बारे में</h3>
+        <p class="mt-4 text-gray-600">हम भारतीय सौंदर्य और संस्कृति से प्रेरित वेबसाइट बनाते हैं।</p>
+    </section>
+
+    <section id="services" class="py-16 px-6 text-center">
+        <h3 class="text-3xl font-semibold text-orange-700">हमारी सेवाएँ</h3>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white shadow-md rounded-lg">वेब डिज़ाइन</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">यूआई/यूएक्स डिज़ाइन</div>
+            <div class="p-6 bg-white shadow-md rounded-lg">ब्रांडिंग</div>
+        </div>
+    </section>
+
+    <footer class="p-6 text-center text-gray-500 text-sm">
+        &copy; 2025 भारतीय डिज़ाइन वेबसाइट। सभी अधिकार सुरक्षित।
+    </footer>
+</body>
+</html>
